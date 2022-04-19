@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Productivity Manager 9000 X-Pro \nDate: "
+        android:textColor="@color/dark_grey"></TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/focus_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/focus_button"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="30sp"></TextView>
+
+        <Button
+            android:id="@+id/focus_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_button"
+            android:text="Focus"
+            android:textAllCaps="false"
+            android:textColor="@color/white"></Button>
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/reset_button"
+            android:layout_toRightOf="@+id/focus_timer"
+            android:layout_below="@+id/focus_button"
+            android:visibility="invisible"
+            android:layout_marginLeft="10dp"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/list_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sum: "></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/ms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MS"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/ms_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/ms"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2/3"
+                        android:layout_below="@+id/ms_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/fb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FB"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/fb_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/fb"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="tbd"
+                        android:layout_below="@+id/fb_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:id="@+id/yt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YT"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/yt_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/yt"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2/4"
+                        android:layout_below="@+id/yt_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/afk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AFK"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/afk_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/afk"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_below="@+id/afk_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/shows"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shows"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/shows_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/shows"
+                        android:textSize="14dp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="tbd"
+                        android:layout_below="@+id/shows_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#00897B"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:id="@+id/something"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sth"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/something_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timer"
+                        android:layout_below="@+id/something"
+                        android:textSize="14sp"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2/3"
+                        android:layout_below="@+id/something_timer"
+                        android:layout_centerHorizontal="true"
+                        ></TextView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/button_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00897B"
+        android:text="tbd"
+        android:textStyle="bold"></Button>
+
+</LinearLayout>
+
+
+
+
